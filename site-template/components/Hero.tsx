@@ -6,7 +6,7 @@ interface HeroProps {
 
 export default function Hero({ hero }: HeroProps) {
   return (
-    <section className="py-20 bg-gradient-to-r from-sky-50 to-white">
+    <section className="py-20 bg-gradient-to-r from-sky-100 to-white">
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
           {hero.title}

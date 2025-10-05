@@ -7,7 +7,7 @@ interface ContactDataProps {
 export default function About({ contact }: ContactDataProps) {
   const mailTo = `mailto:${contact.email}?subject=Заказ%20сайта`;
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-slate-400">
       <div className="container mx-auto px-6 max-w-xl text-center">
         <h2 className="text-2xl font-bold mb-4">Контакты</h2>
         <p className="mb-2">
