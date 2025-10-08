@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 px-0 py-0 rounded-lg hover:bg-gray-300   transition-colors"
+        className="flex items-center gap-1 px-0 py-0 rounded-lg hover:bg-gray-300   transition-colors duration-500"
       >
         <svg className="w-9 h-9 fill-current text-white">
           <use href="/sprite.svg#icon-changeLanguage" />
@@ -41,7 +41,7 @@ export default function LanguageSwitcher() {
 
       {/* Выпадающее меню */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-500 rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50">
+        <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-500 rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50 ">
           {[
             { code: "en", label: "En English" },
             { code: "ua", label: "🇺a Українська" },
