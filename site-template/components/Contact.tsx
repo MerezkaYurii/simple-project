@@ -9,8 +9,8 @@ export default function About({ contact }: ContactDataProps) {
   const { t } = useTranslation("common");
   const mailTo = `mailto:${contact.email}?subject=Заказ%20сайта`;
   return (
-    <section id="contact" className=" bg-slate-400">
-      <div className="container mx-auto px-6  py-16 text-center bg-gradient-to-r from-sky-500 to-white rounded-2xl mb-[15px]">
+    <section id="contact" className="">
+      <div className="container mx-auto px-6  py-16 text-center bg-gray-100 dark:bg-white/5 rounded-2xl mb-[15px]">
         <h2 className="text-2xl font-bold mb-4">{t("contact.title")}</h2>
         <p className="mb-2">
           {t("contact.phone")}:{" "}

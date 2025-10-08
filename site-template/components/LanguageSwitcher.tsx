@@ -32,7 +32,7 @@ export default function LanguageSwitcher() {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 px-0 py-0  hover:bg-gray-300 transition-colors"
+        className="flex items-center gap-1 px-0 py-0 rounded-lg hover:bg-gray-300   transition-colors"
       >
         <svg className="w-9 h-9 fill-current text-white">
           <use href="/sprite.svg#icon-changeLanguage" />
@@ -41,7 +41,7 @@ export default function LanguageSwitcher() {
 
       {/* Выпадающее меню */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50">
+        <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-500 rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50">
           {[
             { code: "en", label: "En English" },
             { code: "ua", label: "🇺a Українська" },
@@ -50,8 +50,10 @@ export default function LanguageSwitcher() {
             <button
               key={lang.code}
               onClick={() => changeLanguage(lang.code as Locale)}
-              className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                currentLocale === lang.code ? "bg-gray-200 font-semibold" : ""
+              className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-200 dark:hover:bg-gray-600 ${
+                currentLocale === lang.code
+                  ? "bg-gray-300 font-semibold dark:bg-gray-800"
+                  : ""
               }`}
             >
               {lang.label}

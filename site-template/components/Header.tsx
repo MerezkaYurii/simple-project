@@ -7,8 +7,8 @@ export default function Header() {
   const contacts = data.contacts;
   const { t } = useTranslation("common");
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-500/50 shadow-sm dark:bg-black dark:bg-opacity-80 dark:text-white transition-colors duration-500">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between bg-cyan-700">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gray-300/50 shadow-sm dark:bg-gray-900/70 dark:text-white transition-colors duration-500">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="text-xl font-bold">{t("header.siteTitle")}</div>
 
         <div className="flex items-center gap-2">
