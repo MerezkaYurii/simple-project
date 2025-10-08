@@ -8,19 +8,30 @@ import Footer from "../components/Footer";
 import data from "../data/siteData.json";
 import { SiteData } from "../types/siteData";
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations.js";
+import { i18nConfig } from "../next-i18next.config.mjs";
+import { GetStaticProps } from "next";
 export default function Home() {
   const siteData = data as SiteData;
 
   return (
     <>
-      <Header siteTitle={siteData.siteTitle} phone={siteData.contact.phone} />
-      <main>
-        <Hero hero={siteData.hero} />
-        <About about={siteData.about} />
-        <Services services={siteData.services} />
+      <Header />
+      <main className="pt-[75px]">
+        <Hero />
+        <About />
+        <Services />
         <Contact contact={siteData.contact} />
       </main>
       <Footer siteTitle={siteData.siteTitle} />
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "en", ["common"], i18nConfig)),
+    },
+  };
+};

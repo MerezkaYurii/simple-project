@@ -1,15 +1,13 @@
-import { AboutData } from "../types/siteData";
+import { useTranslation } from "next-i18next";
 
-interface AboutDataProps {
-  about: AboutData;
-}
+export default function About() {
+  const { t } = useTranslation("common");
 
-export default function About({ about }: AboutDataProps) {
   return (
-    <section className="py-16 bg-gray-200">
-      <div className="container mx-auto px-6 max-w-3xl text-center">
-        <h2 className="text-2xl font-bold mb-4">{about.title}</h2>
-        <p className="text-gray-700">{about.text}</p>
+    <section className="about">
+      <div className="container mx-auto px-6 py-20 text-center bg-gradient-to-r from-sky-500 to-white rounded-2xl mb-[15px]">
+        <h2 className="text-3xl font-bold mb-6">{t("about.title")}</h2>
+        <p className="text-lg text-gray-700">{t("about.text")}</p>
       </div>
     </section>
   );

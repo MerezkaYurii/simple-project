@@ -1,23 +1,20 @@
-import { HeroData } from "../types/siteData";
+import { useTranslation } from "next-i18next";
 
-interface HeroProps {
-  hero: HeroData;
-}
+export default function Hero() {
+  const { t } = useTranslation("common");
 
-export default function Hero({ hero }: HeroProps) {
   return (
-    <section className="py-20 bg-gradient-to-r from-sky-100 to-white">
-      <div className="container mx-auto px-6 text-center">
+    <section className="hero">
+      <div className="container mx-auto px-6 py-20 text-center bg-gradient-to-r from-sky-500 to-white rounded-2xl mb-[15px]">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-          {hero.title}
+          {t("hero.title")}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-6">{hero.subtitle}</p>
-        <a
-          href="#contact"
-          className="inline-block px-6 py-3 bg-blue-600 text-white rounded-md"
-        >
-          {hero.cta}
-        </a>
+        <p className="text-lg md:text-xl text-gray-700 mb-6">
+          {t("hero.subtitle")}
+        </p>
+        <button className="px-4 py-2 bg-blue-500 text-white rounded">
+          {t("hero.cta")}
+        </button>
       </div>
     </section>
   );

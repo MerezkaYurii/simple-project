@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export default function Footer({ siteTitle }: any) {
+
+import { useTranslation } from "next-i18next";
+
+export default function Footer() {
+  const { t } = useTranslation("common");
   return (
-    <footer className="bg-gray-900 text-white py-6 mt-12">
+    <footer className="bg-gray-900 text-white py-6 ">
       <div className="container mx-auto px-6 text-center">
-        © {new Date().getFullYear()} {siteTitle} — сделано с ♥
+        © {new Date().getFullYear()} {t("header.siteTitle")} —{" "}
+        {t("footer.text")} ♥
       </div>
     </footer>
   );

@@ -5,7 +5,9 @@
 html,
 body,
 #__next {
+  background-color: rebeccapurple;
   height: 100%;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 * {
   box-sizing: border-box;

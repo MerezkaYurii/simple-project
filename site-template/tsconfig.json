@@ -17,6 +17,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["site-template/next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "site-template/next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js",
+    "pages/_app.js"
+  ],
   "exclude": ["node_modules"]
 }
