@@ -23,7 +23,7 @@ export default function Home() {
         <Services />
         <Contact contact={siteData.contact} />
       </main>
-      <Footer siteTitle={siteData.siteTitle} />
+      <Footer />
     </>
   );
 }

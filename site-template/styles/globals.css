@@ -5,9 +5,7 @@
 html,
 body,
 #__next {
-  background-color: rebeccapurple;
-  height: 100%;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  @apply min-h-screen transition-colors duration-500 bg-white text-gray-900 dark:bg-[#011238] dark:text-white;
 }
 * {
   box-sizing: border-box;

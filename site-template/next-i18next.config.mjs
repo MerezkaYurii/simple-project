@@ -2,8 +2,8 @@ import path from "path";
 
 export const i18nConfig = {
   i18n: {
-    defaultLocale: "ua",
-    locales: ["en", "ua", "ru"],
+    defaultLocale: "en",
+    locales: ["en", "ua"],
   },
   localePath:
     typeof window === "undefined"
