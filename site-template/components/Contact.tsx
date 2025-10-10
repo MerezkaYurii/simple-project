@@ -9,16 +9,18 @@ export default function About({ contact }: ContactDataProps) {
   const { t } = useTranslation("common");
   const mailTo = `mailto:${contact.email}?subject=Заказ%20сайта`;
   return (
-    <section id="contact" className="">
-      <div className="container mx-auto px-6  py-16 text-center bg-gray-100 dark:bg-white/5 rounded-2xl mb-[15px]">
-        <h2 className="text-2xl font-bold mb-4">{t("contact.title")}</h2>
-        <p className="mb-2">
+    <section id="contact" className="px-4 sm:px-6 lg:px-8 ">
+      <div className="container mx-auto  py-16 text-center bg-gray-100 dark:bg-white/5 rounded-2xl mb-[15px]">
+        <h2 className="text-lg sm:text-xl md:text-2xl  font-extrabold mb-4">
+          {t("contact.title")}
+        </h2>
+        <p className="text-sm sm:text-base md:text-lg mb-2">
           {t("contact.phone")}:{" "}
           <a href={`tel:${contact.phone}`} className="underline">
             {contact.phone}
           </a>
         </p>
-        <p className="mb-4">
+        <p className="text-sm sm:text-base md:text-lg mb-4">
           {t("contact.email")}:{" "}
           <a href={mailTo} className="underline">
             {contact.email}
@@ -26,7 +28,7 @@ export default function About({ contact }: ContactDataProps) {
         </p>
         <a
           href={mailTo}
-          className="inline-block px-5 py-3 bg-blue-600 text-white rounded-md"
+          className="inline-block px-6 py-2 bg-blue-700 text-white rounded-xl hover:opacity-80 transition  duration-500"
         >
           {t("contact.button")}
         </a>
