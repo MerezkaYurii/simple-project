@@ -8,7 +8,7 @@ export default function Services() {
     desc: string;
   }[];
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
+    <section className="px-2 sm:px-4 lg:px-6">
       <div className="container mx-auto px-6 py-16 bg-gray-100 dark:bg-white/5 rounded-2xl mb-[15px]">
         <h2 className="text-lg sm:text-xl md:text-2xl font-extrabold mb-6">
           {t("services.title")}

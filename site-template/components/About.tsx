@@ -4,7 +4,7 @@ export default function About() {
   const { t } = useTranslation("common");
 
   return (
-    <section className="abou px-4 sm:px-6 lg:px-8 t">
+    <section className="abou px-2 sm:px-4 lg:px-6 ">
       <div className="container mx-auto  py-16 text-center bg-gray-100 dark:bg-white/5 rounded-2xl mb-[15px]">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold  mb-4 leading-tight">
           {t("about.title")}
