@@ -8,7 +8,7 @@ export default function Document() {
         <meta name="description My Template" content="My Template" />
 
         {/* Open Graph (для Facebook, Telegram и др.) */}
-        <meta property="og:title" content="My Loft" />
+        <meta property="og:title" content="My Template" />
         <meta
           property="og:description"
           content="A clean and minimal web project built with Next.js."
@@ -39,7 +39,7 @@ export default function Document() {
         <meta name="twitter:image" content="/img-for-socialnetworks.jpg" />
 
         {/* Иконка */}
-        <link rel="icon" href="/img-for-title.png" />
+        <link rel="icon" href="/img-2.png" />
       </Head>
       <body>
         <Main />

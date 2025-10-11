@@ -1,9 +1,11 @@
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 export default function Services() {
   const { t } = useTranslation("common");
   const services = t("services.items", { returnObjects: true }) as {
     id: number;
+    image: string;
     name: string;
     desc: string;
   }[];
@@ -19,6 +21,15 @@ export default function Services() {
               key={service.id}
               className="p-6 bg-white dark:bg-gray-100 border rounded-xl shadow-sm shadow-gray-400"
             >
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto">
+                <Image
+                  src={service.image}
+                  alt="image"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
               <h3 className="font-semibold  mb-2 dark:text-gray-900">
                 {service.name}
               </h3>
