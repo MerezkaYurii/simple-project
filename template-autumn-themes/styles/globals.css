@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+  @apply min-h-screen transition-colors duration-500 bg-[#fcf6ef] text-[#1E293B]  dark:text-[#F59E0B];
+}
+
+/* dark:bg-[#011238] */
+
+.dark html,
+.dark body,
+.dark #__next {
+  background: linear-gradient(45deg, #1a0f07 0%, #332017 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
